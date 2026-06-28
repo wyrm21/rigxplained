@@ -35,3 +35,10 @@ a {
   background: #1E1E2E;
   border-radius: 3px;
 }
+
+/* Fix SVG fill override - stops global color bleeding into guide SVGs */
+svg polygon, svg rect, svg circle,
+svg ellipse, svg path, svg line, svg text {
+  fill: revert;
+  stroke: revert;
+}
